@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"><!-- 文字化け防止の記述 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Aoto's_Portfolio</title>
+   <link rel="stylesheet" href="../css/homestyle.css">
+	 <link rel="stylesheet" type="text/css" href="../css/font.css">
+	 <link rel="stylesheet" type="text/css" href="../css/other.css">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+	 <!--グーグルフォント-->
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+	 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	 <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+	 <!--fontawesome-->
+	<script src="https://kit.fontawesome.com/b21e0b91b7.js" crossorigin="anonymous"></script>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- devicon CSS-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+	<!--photo_gallery-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/photo_gallery.css">
+	<!--scroll_down-->
+	<link rel="stylesheet" type="text/css" href="../css/scroll_down.css">
+	<!-- フォント -->
+	<link rel="stylesheet" type="text/css" href="../css/font.css">
+	<!-- loading_animation -->
+	<link rel="stylesheet" type="text/css" href="../css/loading.css">
+</head>
+<!-- 初めはスクロール禁止 -->
+<body class="no_scroll">
+
+	<div id="splash">
+        <div class='container_load'>
+            <div id="center_svg">
+                <svg class='part' x="0px" y="0px" viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+                    <path class="svgpath" id="playload" d="M189.5,140.5c-6.6,29.1-32.6,50.9-63.7,50.9c-36.1,0-65.3-29.3-65.3-65.3
+                c0,0,17,0,23.5,0c10.4,0,6.6-45.9,11-46c5.2-0.1,3.6,94.8,7.4,94.8c4.1,0,4.1-92.9,8.2-92.9c4.1,0,4.1,83,8.1,83
+                c4.1,0,4.1-73.6,8.1-73.6c4.1,0,4.1,63.9,8.1,63.9c4.1,0,4.1-53.9,8.1-53.9c4.1,0,4.1,44.1,8.2,44.1c4.1,0,3.1-34.5,7.2-34.5
+                c4.1,0,3.1,24.6,7.2,24.6c4.1,0,2.5-14.5,5.2-14.5c2.2,0,0.8,5.1,4.2,4.9c0.4,0,13.1,0,13.1,0c0-34.4-27.9-62.3-62.3-62.3
+                c-27.4,0-50.7,17.7-59,42.3" />
+                
+                    <path class="svgbg" d="M61,126c0,0,16.4,0,23,0c10.4,0,6.6-45.9,11-46c5.2-0.1,3.6,94.8,7.4,94.8c4.1,0,4.1-92.9,8.2-92.9
+                c4.1,0,4.1,83,8.1,83c4.1,0,4.1-73.6,8.1-73.6c4.1,0,4.1,63.9,8.1,63.9c4.1,0,4.1-53.9,8.1-53.9c4.1,0,4.1,44.1,8.2,44.1
+                c4.1,0,3.1-34.5,7.2-34.5c4.1,0,3.1,24.6,7.2,24.6c4.1,0,2.5-14.5,5.2-14.5c2.2,0,0.8,5.1,4.2,4.9c0.4,0,22.5,0,23,0" />
+                </svg>
+            </div>
+            <div id="load">
+                <div>G</div>
+                <div>N</div>
+                <div>I</div>
+                <div>D</div>
+                <div>A</div>
+                <div>O</div>
+                <div>L</div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- マウスストーカー -->
+	<div id="stalker"></div>
+
+	<header id="header">
+		<nav id="g-navi" class="flex_jsut_left">
+			<ul>
+				<li><a href="#top-page">Aoto's Portfolio</a></li>
+			</ul>
+		</nav>
+		<nav id="g-navi">
+			<ul>
+				<li><a href="#profile">PROFILE</a></li>
+				<li><a href="#carrer">CAREER</a></li>
+				<li><a href="#skill">SKILL</a></li>
+				<li><a href="#works">WORKS</a></li>
+				<li><a href="#publication">PUBLICATION</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<div id="top-page"></div>
+	<!--トップページ-->
+	<div id="topimg">
+			<div id="container-top">
+				<div class="item">
+					<h2 class="item-child ChocolateNoteClass">Sugahara Aoto's <br>Portfolio</h2>
+				</div>
+			</div>
+	</div>
+
+	<div class="scrolldown4"><span>Scroll</span></div>
+
+	<!--画面を3分割-->
+	<div id="split-3">
+		<nav id="left-100"></nav>
+		<main>
+			<!--PROFILE-->
+		<div id="container-box">
+			<div id="profile" class="block-item" >
+					<div class="block-item-child">
+						<div id="profile-space" class="center">
+							<span class="fa-solid fa-user fa-3x icon"></span>
+							<p class="no-line Lora font-size">PROFILE</p>
+						</div>
+
+						<div id="profile-space"></div>
+						<div class="container_profile">
+							<div id="circle-thumb-shadow" class="no-shrink"></div>
+							<div class="margin-left margin-right">
+								<table class="profile">
+									<tbody class="Lora">
+										<tr>
+											<th>Name</th>
+											<td>菅原  碧斗(Sugahara Aoto)</td>
+										</tr>
+										<tr>
+											<th>Age</th>
+											<td>22(2001/01)</td>
+										</tr>
+										<tr>
+											<th>Profession</th>
+											<td>大学院生(graduate student)</td>
+										</tr>
+									</tbody>
+								</table>
+								<br>
+								<div id="my_exp">
+									初めまして。ポートフォリオをご覧頂きありがとうございます．情報系大学院生の菅原と申します．<br>
+									研究分野は音声×機械学習(音声合成/声質変換)になり、
+									オペラ未経験者の音声からプロレベルのオペラ歌唱音声を作り出す研究を行っております．<br>
+									また、独自でアプリケーション開発を行っており、主にサークルでの業務を効率化するアプリケーション開発を行っています．<br>
+									持ち前の行動力と探究心で日々新しい知識を取り入れ、自己研鑽に励んでいます．<br>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			<!--CAREER-->
+			<div id="carrer" class="block-item">
+					<div class="block-item-child">
+						<div id="profile-space" class="center">
+							<span class="fa-solid fa-receipt fa-3x icon"></span>
+							<p class="no-line Lora font-size">CAREER</p>
+						</div>
+						
+							<div class="center_ul">
+								<ul class="timeline">
+									<li>
+									<p class="timeline-date">2016/04 - 2019/03</p>
+									<div class="timeline-content">
+										<h3>兵庫県立　夢野台高等学校</h3>
+										<p>志望校合格に向け勉強漬けの日々を送ると共に、皆勤賞を達成した．</p>
+									</div>
+									</li>
+									<li>
+									<p class="timeline-date">2019/04 - 2021/03</p>
+									<div class="timeline-content">
+										<div class="box_hover"><a href="https://www.eng.u-hyogo.ac.jp/"><span>
+											<h3 data-text="兵庫県立大学　工学部　電気電子情報工学科">兵庫県立大学　工学部　電気電子情報工学科</h3>
+										</span></a></div>
+										<p>電気回路、C/Pythonを始めとするプログラミングの基礎を学ぶ．<br>
+											また、大学の講義と並行して編入学試験を受験し、倍率10倍の神戸大学に合格．</p>
+									</div>
+									</li>
+									<li>
+									<p class="timeline-date">2021/04 - 2023/03</p>
+									<div class="timeline-content">
+										<div class="box_hover"><a href="http://www.eng.kobe-u.ac.jp/"><span>
+											<h3 data-text="神戸大学　工学部　情報知能工学科">神戸大学　工学部　情報知能工学科</h3>
+										</span></a></div>
+										<p class="no_ind">内部生よりも1.5倍以上の講義を受けつつ、学部上位１割の成績を取得し
+										<div class="box_hover_sub"><a href="http://www.me.cs.scitec.kobe-u.ac.jp/"><span data-text="メディア情報研究室">メディア情報研究室</span></a></div>に配属．<br>
+										また、C#にて所属するサークルでの業務効率化アプリケーションの開発を行う．</p>
+
+									</div>
+									</li>
+									<li>
+										<p class="timeline-date">2023/04 - 現在</p>
+										<div class="timeline-content">
+											<div class="box_hover"><a href="http://www.csi.kobe-u.ac.jp/"><span>
+												<h3 data-text="神戸大学　システム情報学研究科　システム情報専攻">神戸大学　システム情報学研究科　システム情報専攻</h3>
+											</span></a></div>
+											<div class="box_hover_sub"><a href="http://www.me.cs.scitec.kobe-u.ac.jp/"><span data-text="同研究室">同研究室</span></a></div>
+											にて『オペラ歌唱』を対象とした、音声合成/声質変換のアルゴリズム開発(機械学習)を行っている．
+										</div>
+									</li>
+								</ul>
+							</div>
+					</div>
+				</div>
+			<!--SKILL-->
+			<div id="skill" class="block-item">
+						<div class="block-item-child">
+							<div id="profile-space" class="center">
+								<span class="fa-solid fa-lightbulb fa-3x icon"></span>
+								<p class="no-line Lora font-size">SKILL</p>
+							</div>
+
+							<div class="div_win_fit">
+								<div class="container_skill">
+									<table class="skill_table">
+										<tr>
+											<!-- Python -->
+											<td>
+												<div class="card" style="width: 25rem;">
+													<div class="card-body">
+														<h5 class="card-title Lora bolder">
+																<img class ="p-icon45 fadein" src="../img/python-original.svg">　Python/深層学習
+														</h5>
+														<h6 class="card-subtitle mb-2 text"><span>経験年数-3年6ヶ月</span></h6>
+														<h6 class="card-subtitle mb-2 text-muted"><span class="star5_rating" data-rate="4.5"></span></h6>
+														<p class="card-text">研究において深層学習を用いた声質変換や音声合成で用いています．<br>最も使い慣れた言語です.</p>
+													</div>
+												</div>
+											</td>
+											<!-- C# -->
+											<td>
+												<div class="card" style="width: 25rem;">
+													<div class="card-body">
+														<h5 class="card-title Lora bolder">
+															<img class ="p-icon45 fadein_150" src="../img/csharp-original.svg">　C#/.NET
+														</h5>
+														<h6 class="card-subtitle mb-2 text"><span>経験年数-1年6ヶ月</span></h6>
+														<h6 class="card-subtitle mb-2 text-muted"><span class="star5_rating" data-rate="4"></span></h6>
+														<p class="card-text">
+															独自で.NETを用いたWeb/Windowsアプリケーションの開発を学習しています.
+															<br>
+															<br>
+														</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+		
+										<tr>
+											<!-- C言語 -->
+											<td>
+												<div class="card" style="width: 25rem;">
+													<div class="card-body">
+														<h5 class="card-title Lora bolder">
+															<img class ="p-icon45 fadein" src="../img/c-original.svg">　C
+														</h5>
+														<h6 class="card-subtitle mb-2 text"><span>経験年数-3年</span></h6>
+														<h6 class="card-subtitle mb-2 text-muted"><span class="star5_rating" data-rate="3.5"></span></h6>
+														<p class="card-text">システム開発経験はありませんが、大学授業レベルの知識を持っています．</p>
+													</div>
+												</div>
+											</td>
+											<!-- html/css/js -->
+											<td>
+												<div class="card" style="width: 25rem;">
+													<div class="card-body">
+														<h5 class="card-title Lora bolder">
+															<img class ="p-icon40 fadein_150" src="../img/web.png">　HTML5/CSS3/JS
+														</h5>
+														<h6 class="card-subtitle mb-2 text"><span>経験年数-1年</span></h6>
+														<h6 class="card-subtitle mb-2 text-muted"><span class="star5_rating" data-rate="3.5"></span></h6>
+														<p class="card-text">基本的なことは一通り可能です.<br>Bootstrap,jQueryを用いることができます．</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+		
+										<tr>
+											<td>
+												<div class="card" style="width: 25rem;">
+													<div class="card-body">
+														<h5 class="card-title Lora bolder">
+															<img class ="p-icon40 fadein" src="../img/java.svg" >　Java
+														</h5>
+														<h6 class="card-subtitle mb-2 text"><span>経験年数-1年</span></h6>
+														<h6 class="card-subtitle mb-2 text-muted"><span class="star5_rating" data-rate="2"></span></h6>
+														<p class="card-text">システムの開発経験はありませんが、大学授業レベルの知識を持っています．</p>
+													</div>
+												</div>
+											</td>
+											<td>
+												<div class="card" style="width: 25rem;">
+													<div class="card-body">
+														<h5 class="card-title Lora bolder">
+															<img class ="p-icon fadein_150" src="../img/git-plain.svg">　Tool
+														</h5>
+														<h6 class="card-subtitle mb-2 text"><span>経験年数-etc.</span></h6>
+														<h6 class="card-subtitle mb-2 text-muted"><span class="star5_rating" data-rate="0"></span></h6>
+														<p class="card-text">主に以下のツールを用いています．<br>Git / GitHub / Visual Studio Code / Tex</p>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</table>
+
+									<!-- 資格 -->
+									<div class="card skill_mar" style="width: 25rem;">
+										<div class="card-body">
+											<h5 class="card-title Lora bolder">
+													<img class ="p-icon45 fadein" src="../img/list-solid.svg">　保有資格
+											</h5>
+											<p class="card-text">高校以降に取得した資格になります．</p>
+											<br>
+											<h6 class="card-subtitle mb-2 text"><span>2018-02</span></h6>
+											<p class="card-text">実用英語技能検定２級 取得</p>
+											<br>
+											<h6 class="card-subtitle mb-2 text"><span>2019-10</span></h6>
+											<p class="card-text">普通自動車第一種運転免許(AT 限定) 取得</p>
+											<br>
+											<h6 class="card-subtitle mb-2 text"><span>2021-02</span></h6>
+											<p class="card-text">TOEIC® Listening & Reading Test 750 点取得</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+			<!--WORKS-->
+				<div id="works" class="block-item">
+					<div class="block-item-child">
+						<div id="profile-space" class="center">
+							<span class="fa-solid fa-list-check fa-3x icon"></span>
+							<p class="no-line Lora font-size">WORKS</p>
+						</div>
+
+						<!-- ここから -->
+						<div>
+							<ul class="menu gallery">
+								<li>
+									<!-- 卒業研究 -->
+									<div class="card mb_15px" style="width: 25rem;">
+										<div class="zoomInRotate">
+											<a href="https://docs.google.com/presentation/d/18TnEYxJP3VGeR7jdmdgugu9ThnKNIXLq/edit?usp=drive_link&ouid=102765211659877033316&rtpof=true&sd=true" >
+												<span class="card mask">
+													<img src="../img/soturon.png" class="opa works">
+												</span>
+											</a>
+										</div>
+										<div class="card-body">
+												<h5 class="card-title">卒業研究</h5>
+											<p class="card-text">オペラ未経験者の音声からオペラ歌唱音声を合成するシステムの研究です．</p>
+										</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">【使用言語/フレームワーク】<br>Python</li>
+											</ul>
+										<div class="card-body">
+											<a href="https://docs.google.com/presentation/d/18TnEYxJP3VGeR7jdmdgugu9ThnKNIXLq/edit?usp=drive_link&ouid=102765211659877033316&rtpof=true&sd=true" class="card-link">
+												卒論発表会資料
+											</a>
+										</div>
+									</div>
+								</li>
+
+								<li>
+									<!-- ホームページ -->
+									<div class="card mb_15px" style="width: 25rem;">
+										<div class="zoomInRotate">
+											<a href="#" >
+												<span class="card mask">
+													<img src="../img/portfolio.png" class="opa works">
+												</span>
+											</a>
+										</div>
+										<div class="card-body">
+												<h5 class="card-title">ポートフォリオ</h5>
+											<p class="card-text">自己紹介ポートフォリオサイトです．<br><br></p>
+										</div>
+											<ul class="list-group list-group-flush">
+												<li class="list-group-item">【使用言語/フレームワーク】<br>HTML / CSS / JavaScript</li>
+											</ul>
+											<div class="card-body">
+											<a href="#" class="card-link">GitHub</a>
+										</div>
+									</div>
+								</li>
+
+								<li>
+									<!-- C#app -->
+										<div class="card mb_15px" style="width: 25rem;">
+									<div class="zoomInRotate">
+										<a href="#" >
+											<span class="card mask">
+												<img src="../img/Auto_Html_creater_2.png" class="opa works">
+											</span>
+										</a>
+									</div>
+									<div class="card-body">
+											<h5 class="card-title">自動HTML生成器</h5>
+										<p class="card-text">ホームページ(サークル活動)のHTMLファイルを自動生成するアプリケーションです．</p>
+									</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item">【使用言語/フレームワーク】<br>C# / .Net FrameWork</li>
+										</ul>
+										<div class="card-body">
+										<a href="#" class="card-link">GitHub</a>
+									</div>
+									</div>
+								</li>
+
+								<li>
+									<!-- C#app -->
+										<div class="card mb_15px" style="width: 25rem;">
+									<div>
+										<a>
+											<span class="card mask">
+												<img src="../img/coming_soon.svg" class="works">
+											</span>
+										</a>
+									</div>
+									<div class="card-body">
+											<h5 class="card-title">業務管理アプリケーション</h5>
+										<p class="card-text">サークル活動の会員/備品/会計管理を一括で管理するwebアプリケーションです</p>
+									</div>
+										<ul class="list-group list-group-flush">
+											<li class="list-group-item">【使用言語/フレームワーク】<br>C# / ASP.NET / SQL</li>
+										</ul>
+										<div class="card-body">
+										<a class="card-link">Coming Soon...</a>
+									</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+							<!-- ここまで -->
+					</div>
+				</div>
+
+			<!--Conference presentation-->
+			<div id="publication" class="block-item">
+				<div class="block-item-child">
+					<div id="profile-space" class="center">
+						<span class="fa-solid fa-file-lines fa-3x icon"></span>
+						<p class="no-line Lora font-size">Publication</p>
+					</div>
+
+					<!-- ここから -->
+					<div>
+						<ul class="menu gallery_2">
+							<li>
+								<!-- 発話音声を用いたオペラ歌唱音声合成の初期検討 -->
+								<div class="card mb_15px" style="width: 25rem">
+								<img src="../img/2023_03_onkyo.png" class="script">
+								<div class="card-body">
+										<h5 class="card-title">「発話音声を用いたオペラ歌唱音声合成の初期検討」</h5>
+									<p class="card-text"><a href="https://acoustics.jp/">日本音響学会</a><br>第149回(2023年春季)研究発表会</p>
+								</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">【日程】<br>2023/03/15 - 2023/03/17</li>
+									</ul>
+									<div class="card-body">
+									<a href="http://www.me.cs.scitec.kobe-u.ac.jp/~takigu/pdf/2023/1-3P-9_suga.pdf" class="card-link">日本音響学会2023年春季研究発表会講演論文集, 1-3P-9, pp. 795-798</a>
+								</div>
+								</div>
+							</li>
+							<li>
+								<!-- Diff-SVCを用いたオペラ歌唱音声合成 -->
+								<div class="card mb_15px" style="width: 25rem;">
+								<img src="../img/2023_otogaku.png" class="script">
+								<div class="card-body">
+										<h5 class="card-title">「Diff-SVCを用いたオペラ歌唱音声合成」</h5>
+									<p class="card-text"><a href="http://www.sigmus.jp/">音楽情報科学研究会</a><br>音学シンポジウム2023</p>
+								</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">【日程】<br>2023/06/23 - 2023/06/24</li>
+									</ul>
+									<div class="card-body">
+									<a href="https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202302238703847392" class="card-link">電子情報通信学会技術研究報告, Vol. 123, No. 88, SP2023-7, pp. 30-35</a>
+								</div>
+								</div>
+							</li>
+
+							<li>
+								<!-- Diff-SVCを用いたオペラ歌唱音声合成における中高域強調ネットワークの検討 -->
+								<div class="card mb_15px" style="width: 25rem;">
+									<img src="../img/2023_09_onkyo.png" class="script">
+									<div class="card-body">
+										<h5 class="card-title">「Diff-SVCを用いたオペラ歌唱音声合成における中高域強調ネットワークの検討」</h5>
+									<p class="card-text"><a href="https://acoustics.jp/">日本音響学会</a><br>第150回(2023年秋季)研究発表会</p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">【日程】<br>2023/09/26 - 2023/09/28</li>
+									</ul>
+									<div class="card-body">
+									<a href="https://acoustics.jp/cms/wp_asj/wp-content/uploads/004_2023autumn_program.pdf" class="card-link">詳細</a>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<!-- Operatic Singing Voice Synthesis Using Diff-SVC -->
+								<div class="card mb_15px" style="width: 25rem;">
+									<img src="../img/GCCE.png" class="script">
+									<div class="card-body">
+										<h5 class="card-title">「Operatic Singing Voice Synthesis Using Diff-SVC」</h5>
+									<p class="card-text"><a href="https://www.ieee-gcce.org/2023/index.html">2023 IEEE<br>12th Global Conference on Consumer Electronics (GCCE 2023) </a></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">【日程】<br>2023/10/10 - 2023/10/13</li>
+									</ul>
+									<div class="card-body">
+									<a href="https://www.ieee-gcce.org/2023/index.html" class="card-link">詳細</a>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<!-- 歌声合成と変換を用いた未経験者音声からのオペラ歌唱音声合成 -->
+								<div class="card mb_15px" style="width: 25rem;">
+									<img src="../img/coming_soon.svg" class="script">
+									<div class="card-body">
+										<h5 class="card-title">「歌声合成と変換を用いた未経験者音声からのオペラ歌唱音声合成」</h5>
+									<p class="card-text"><a href="https://acoustics.jp/">日本音響学会</a><br>第151回(2024年春季)研究発表会<br><br></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">【日程】<br>2024/03/06 - 2024/03/08</li>
+									</ul>
+									<div class="card-body">
+									<a  class="card-link">Comming Soon...</a>
+									</div>
+								</div>
+							</li>
+
+							<li>
+								<!-- Operatic Singing Voice Synthesis Using Voice Conversion Model(仮) -->
+								<div class="card mb_15px" style="width: 25rem;">
+									<img src="../img/coming_soon.svg" class="script">
+									<div class="card-body">
+										<h5 class="card-title">「Operatic Singing Voice Synthesis Using Voice Conversion Model(仮)」</h5>
+									<p class="card-text"><a href="https://www.nowpublishers.com/SIP">APSIPA Transactions on Signal and Information Processing</a><br><br></p>
+									</div>
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item">【日程】<br>---</li>
+									</ul>
+									<div class="card-body">
+									<a  class="card-link">Comming Soon...</a>
+									</div>
+								</div>
+							</li>
+					</div>
+						<!-- ここまで -->
+				</div>
+			</div>
+
+			<!--CONTACT-->
+			<div id="contact" class="block-item">
+				<div class="block-item-child">
+					<div id="profile-space" class="center">
+						<span class="fa-solid fa-envelope fa-3x icon"></span>
+						<p class="no-line Lora font-size">CONTACT</p>
+					</div>
+					<div class="social">
+						<a href="https://github.com/aoto2025recruit" class="link github" target="_parent"><span class="fa fa-github"></span></a>
+					</div>
+					<br>
+					<p class="center Lora font-size_larger">GitHub</p>
+				</div>
+			</div>
+		</main>
+		<aside>
+		</aside>
+	</div>
+		<footer>
+			<span id="copyright" class="Lora">
+				© 2022-<script>document.write(new Date().getFullYear());</script> Aoto Sugahara
+			</span>
+		</footer>
+	</div>	
+
+<!--javascript読み込み-->
+
+  <!--ページトップのタブ用-->
+	  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	  <!--自作のJS-->
+	  <script src="../js/choice_tab.js"></script>
+  <!--ここまで-->
+
+	<!--カーソルの動き用-->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.1/TweenMax.min.js"></script>
+	 <!--自作のJS-->
+	 <script src="../js/mouse.js"></script>
+	<!--ここまで-->
+
+	<!--ハンガーメニュー用-->
+	<!--自作のJS-->
+	<script src="../js/other.js"></script>
+	<!--ここまで-->
+
+	<!--フェードイン用-->
+	<!--自作のJS-->
+	<script src="../js/fadein.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+	<script src="../js/font.js"></script>
+
+	<!--loading用-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+	<!--自作のJS-->
+	<script src="../js/loading.js"></script>
+<!--ここまで-->
+</body>
+</html>

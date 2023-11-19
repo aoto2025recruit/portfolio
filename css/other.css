@@ -1,0 +1,842 @@
+@charset "utf-8";
+
+/*======== トップページの画像のためのCSS ===========*/
+#topimg{
+  background-image:url("../img/S__72409090.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;/*画面いっぱいにする*/
+  background-position: center center;/*中心に*/
+  z-index: 1;
+}
+
+/*トップの文字の設定*/
+#container-top{
+  height: 100vh;
+  width: 100%;
+  display: flex;/*flexboxの設定*/
+  justify-content: center;/*水平方向にボックスを中心に*/
+  align-items: center;/*垂直方向にボックスを中心に*/
+}
+
+div.item{
+  position: relative;
+  background-color: rgba(255,255,255,0.65); /* 背景色(白) */
+  box-shadow: 0 0 5px 1px #ccc; /* 影 */
+  /*border-radius:10px;*//*角を丸くする*/
+  z-index: 2;
+}
+
+h2.item-child{
+  position: relative;
+  color: #383838/*#474544*/;
+  text-align: center;/*テキストを中心に*/
+  font-size: 80px;/*文字の大きさ*/
+  font-weight: 700;/*文字の太さ*/
+  z-index: 3;
+}
+
+div.item h2.item-child{
+  margin: 40px;
+  width: 100vw;
+  /*四角にしたかったら*
+  margin:20px 30px;*/
+}
+
+/*========= 画面の3分割のためのCSS ===============*/
+
+#split-3{
+  font-size: 18px;
+  display: flex;
+}
+
+
+/*========= ページトップのためのCSS ===============*/
+
+/*リンクを右下に固定*/
+#page-top{
+	position: fixed;/*画面に固定*/
+	right: 10px;
+	bottom:20px;
+	z-index: 100;/*優先度*/
+    /*はじめは非表示*/
+	opacity: 0;/*不透明度*/
+	transform: translateY(150px);
+}
+
+/*　上に上がる動き　*/
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(150px);
+  }
+}
+
+/*画像の切り替えと動き*/
+#page-top a {
+    /*aタグの形状*/
+	display: block;
+	width: 100px;
+	height: 100px;
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;/*全文字大文字に変換*/
+	text-decoration: none;/*テキストの下に線を引くか*/
+	font-size:0.6rem;
+    /*背景画像の指定*/
+	background: url("../img/flog_off.png") no-repeat center;
+	background-size: contain;
+}
+
+#page-top.floatAnime a{
+	width: 100px;
+	height: 130px;
+    /*背景画像の指定*/
+	background: url("../img/flog_on.png") no-repeat center;
+	background-size: contain;
+    /*アニメーションの指定*/
+	animation: floatAnime 2s linear infinite;
+	opacity: 0;
+}
+
+@keyframes floatAnime {
+  0% { transform: translateX(0); opacity: 0; }
+  25% { transform: translateX(-6px);opacity: 1; }
+  50% { transform: translateX(0) }
+  100% { transform: translateX(6px);opacity: 1; }
+}
+
+/*Page Topと書かれたテキストの位置*/
+#page-top span{
+  position: absolute;
+  bottom: -70px;
+  right: 20px;
+	color: #333;
+}
+/*検証のためのCSS*/
+section{
+	padding: 500px 0;
+}
+
+/*========= スキルの星のためのCSS ===============*/
+.star5_rating{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC; /* グレーカラー  */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before, .star5_rating:after{
+    content: '★★★★★';
+}
+
+.star5_rating:after{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32; /* イエローカラー  */
+}
+
+.star5_rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5_rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5_rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5_rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5_rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
+/*================== 文字のhover用 ======================*/
+
+.box_hover{}
+.box_hover a,.box_hover_sub a{
+  display: inline-block;
+  color:#719bad;
+  /* font-size:100%; */
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+.box_hover_sub,.box_hover_sub a,.no_ind{
+  display: inline-block; 
+}
+
+.no_ind{
+  margin-bottom: 0;
+}
+
+.box_hover a span h3,
+.box_hover_sub a span 
+{
+  display: inline-block;
+  position: relative;
+  transition: .4s;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.box_hover a:hover span h3,
+.box_hover_sub a:hover span
+{
+  background-color: #333;
+  -webkit-transform: translate3d(0, 0, -30px) rotateX(90deg);
+  transform: translate3d(0, 0, -30px) rotateX(90deg);
+}
+.box_hover a span h3:after,
+.box_hover_sub a span:after
+{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: attr(data-text);
+  color: #fff;
+  background-color: #333;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  -webkit-transform: translate3d(0, 105%, 0) rotateX(-90deg);
+  transform: translate3d(0, 105%, 0) rotateX(-90deg);
+}
+
+/*
+<div class="sample_link12"><a href=""><span data-text="テキストマウスオーバー">テキストマウスオーバー</span></a></div>
+*/
+
+.expand_text {}
+.expand_text a{
+  display: inline-block;
+  color:#719bad;
+  font-size:120%;
+  text-decoration:none;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.expand_text a:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*========= ブロックのCSS ===============*/
+.container-block{
+    display: flex;/*flexboxの設定*/
+    flex-direction: column;/*縦に並べる*/
+    align-items: center;
+}
+
+.block-item{
+  min-height: 50vh;
+  display: flex;/*flexboxの設定*/
+  justify-content: center;/*水平方向にボックスを中心に*/
+  align-items: center;/*垂直方向にボックスを中心に*/
+  background-color: #f5f5f5;
+}
+
+
+.block-item-child{
+  width: 100%;
+  margin: 2% auto !important;
+}
+
+.font-size{
+  color:#383838;
+  letter-spacing: 1px;/*テキスト間の幅*/
+  text-transform: uppercase;/*大文字表記*/
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+.center, .center *{
+  text-align: center;
+}
+
+.left, .left *{
+  text-align: left !important;
+}
+
+.right, .right *{
+  text-align: right !important;
+}
+
+#profile-space{
+  margin-bottom: 2rem;
+}
+
+.mb_15px{
+  margin-bottom:15px;
+}
+
+
+/*========= profileのCSS ===============*/
+
+table.profile{
+  border-collapse:separate !important;
+  border-spacing: 0.5rem !important;
+  margin: auto;
+}
+
+.margin-left, .margin-left *{
+  margin-left: 5%;
+}
+
+.margin-right, .margin-right *{
+  margin-right: 5%;
+}
+
+table.simg-space{
+  border-collapse:separate !important;
+  border-spacing: 50px 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#simg{
+  width: 200px;
+  height: 200px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container_skill {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+
+.div_win_fit{
+  width: fit-content;
+  margin: auto;
+}
+
+
+table.skill_table{
+  border-collapse:separate !important;
+  border-spacing: 0.5rem !important;
+  margin: 0;
+  /* margin: auto; */
+}
+
+.skill_mar{
+  margin: 0.5rem 0 ;
+}
+
+.container_profile {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 0% 10%;
+}
+
+#my_exp{
+  /* width: 50%; */
+  word-break:break-all;
+}
+
+.no-shrink{
+  flex: none;
+}
+
+
+/*========= ハンガーメニューのためのCSS ===============*/
+.openbtn{
+  position: fixed;
+  background:#383838;
+  cursor: pointer;
+  width: 60px;
+  height:60px;
+  border-radius: 5px;
+  margin-left: 20px;
+  margin-top: 30px;
+  z-index:10;
+}
+
+/*ボタン内側*/
+.openbtn .openbtn-area{
+    transition: all .4s;
+}
+
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+	  background: #fff;
+  	width: 55%;
+  }
+
+
+.openbtn span:nth-of-type(1) {
+	top:18px;
+}
+
+.openbtn span:nth-of-type(2) {
+	top:28px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:38px;
+}
+
+/*activeクラスが付与されると
+線と周りのエリアが回転して×になる*/
+
+.openbtn.active .openbtn-area{
+	transform: rotateY(-360deg);
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 23px;
+    left: 14px;
+    transform: translateY(6px) rotate(-135deg);
+    width: 55%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+    top: 35px;
+    left: 14px;
+    transform: translateY(-6px) rotate(135deg);
+    width: 55%;
+}
+
+/*========= グローバルナビゲーションのCSS ===============*/
+
+/*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
+/*
+.fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    display: block;
+}
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+	transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}*/
+
+
+/*========= ヘッダーナビゲーションのためのCSS ===============*/
+
+/*==ヘッダーの形状*/
+#header{
+  position: fixed;
+  /* margin-left: 75px;
+  margin-top: 30px; */
+	height: 80px;
+	/*width: 80vw;/*80%*/
+  width:100% ;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(51,51,51,1.0);
+	color:#F0F0F0;
+	/* text-align: center; */
+  /* border-radius: 5px; */
+	padding: 20px;
+  z-index: 10;
+  box-shadow: 2px 2px 4px gray;
+  border-radius:0px 0px 15px 15px;
+  /*変更用*/
+}
+
+/*JSを使いfixedクラスが付与された際の設定*/
+#header.fixed{
+	position: fixed;/*fixedを設定して固定*/
+  z-index: 999;/*最前面へ*/
+  top:0;/*位置指定*/
+  left:0;/*位置指定*/
+}
+
+
+
+/*==ヘッダーのテキストナビゲーションの形状*/
+#g-navi{
+  font-size: larger;
+  width: 100%;
+}
+.flex_jsut_left{
+  display: flex;
+  justify-content: flex-start !important;
+}
+
+
+#g-navi ul{
+	list-style: none;
+	display: flex;
+	/* justify-content: center; */
+  justify-content: right; 
+}
+
+/**/
+#g-navi ul li a{
+	display: block;
+	text-decoration: none;
+	color: #ccc;
+  font-size: 100%;
+	padding:20px;
+}
+
+/*ホバーのときと今いる記事のとき、文字を白に変える*/
+#g-navi ul li.current a,
+#g-navi ul li a:hover{
+	color:#F0F0F0;
+}
+
+/*スライド+クリックででてくる画面*/
+/*横から出てくるやつ*/
+
+/*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+/*#header.dnone #g-navi{
+    /*固定位置にして最背面に*/
+/*    position:fixed;
+	top: 0;
+    left: 0;
+	z-index: 10;
+    /*高さと幅*/
+/*	width:100%;
+	height: 100vh;
+    /*天地中央＆テキスト中央揃え*/
+/*	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    /*はじめは透過0に*/
+/*    opacity: 0;
+	transition: all 0.4s;
+}
+
+
+/*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+/*#header.dnone.panelactive #g-navi{
+	/*opacity: 1;/*不透明に*/
+	/*z-index:3;/*最前面に*/
+	/*background:#eee;
+}
+/*
+#header.dnone.panelactive #g-navi ul{
+	display:block;/*flexの横並びをblockにして縦並びに*/
+/*}*/
+
+
+/*リストの形状*/
+/*
+#header.dnone.panelactive #g-navi li a{
+	color: #333;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+	transition:all 0.3s;
+}*/
+
+/*スライドインアニメーション用のCSS*/
+.fadeRight{
+  animation-name:fadeRightAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+@keyframes fadeRightAnime{
+  from {/*アニメーションを開始するときのCSSを記述*/
+    opacity: 0;
+	  transform: translateX(100px);
+  }
+
+  to { /*アニメーションを終了するときのCSSを記述*/
+    opacity: 1;
+	  transform: translateX(0);
+  }
+}
+
+/*========= フェードイン用のCSS ===============*/
+.fadein {
+  opacity : 0;
+  transform : translate(-100px, 0);
+  transition : all 1s;
+}
+ 
+.fadein.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.fadein_150 {
+  opacity : 0;
+  transform : translate(-100px, 0);
+  transition : all 1s;
+}
+ 
+.fadein_150.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+
+/*========= コピーライト用のCSS ===============*/
+
+#copyright{
+  color: #F0F0F0;
+  line-height: 120px;
+  margin:0;
+}
+
+/*========= fontawesome(icon)のためのCSS ===============*/
+.icon{
+  color:#383838 !important;
+}
+
+/*改行させない*/
+.no-line{
+  display: inline !important;
+}
+
+/*========= アイコンのCSS ===============*/
+.p-icon{
+  width: 50px;
+}
+
+.p-icon45{
+  width: 45px;
+}
+
+.p-icon40{
+  width: 40px;
+}
+
+
+.bolder{
+  font-weight: bolder;
+}
+
+
+/*下の階層のulや矢印の基点にするためliにrelativeを指定*/
+nav ul li{
+	position: relative;
+}
+
+/*ナビゲーションのリンク設定*/
+nav ul li a{
+	display: block;
+	text-decoration: none;
+	color: #999;
+	padding:20px 35px;
+	transition:all .3s;
+}
+
+/*ナビゲーションのリンクの下に線を出すためのコード*/
+nav ul li a::before{
+	content:'';
+	position: absolute;
+	bottom:18%;
+	left:7%;
+	width:90%;
+	height:2px;
+	background-color:#fff;
+	transform:scalex(0);
+	transition: transform 0.3s;
+}
+
+nav ul li a:hover::before{
+	transform:scalex(1);
+}
+
+/*githubのアイコン用*/
+.social {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* padding-top: 10%; */
+  width: 100%;
+  text-align: center;
+  /* transform: translateY(-50%); */
+}
+
+.social .link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px dashed #383838;
+  background-clip: content-box;
+  padding: 10px;
+  transition: .5s;
+  color: #D7D0BE;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 70px;
+}
+
+.social .link span {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social .link:hover {
+  padding: 20px;
+  color: white;
+  margin-left: -5px;
+  transform: translateX(10px) rotate(360deg);
+}
+
+.social .link.github {
+  background-color: #383838;
+  color: white;
+}
+
+.font-size_larger{
+  font-size: larger;
+  font-weight: bolder;
+}
+
+
+/* .social .link.twitter {
+  background-color: #00ACEE;
+  color: white;
+} */
+
+/*ここまで*/
+
+/*自分のアイコンの○の切り抜き*/
+#circle-thumb-shadow{
+  width: 300px;
+  height: 300px;
+  background-image: url(../img/myimg_sq.jpg);/*丸くしたい写真*/
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50%;/*角丸*/
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.6); /*ドロップシャドウ*/
+}
+
+/*ここまで*/
+
+/*年表コンテンツ*/
+
+/*点を消す*/
+.timeline {
+  /* width: 80%; */
+  display: inline-block;
+  width: fit-content;
+  text-align: left;
+  list-style: none;
+  margin: auto;
+}
+
+.center_ul{
+  width: fit-content;
+  margin: auto;
+}
+
+.timeline > li {
+  margin-bottom: 60px;
+}
+
+/* for Desktop */
+@media ( min-width : 640px ){
+  .timeline > li {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+  .timeline-date {
+    width: 17%;
+    float: left;
+    margin-top: 20px;
+    font-weight: bolder;
+  }
+  .timeline-content {
+    width: 83%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding-left: 30px;
+  }
+  .timeline-content:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #6f76c1;
+    position: absolute;
+    left: 16.5%;
+    top: 24px;
+    border-radius: 100%;
+  }
+}
+
+/*ここまで*/
+
+/* マウスストーカー */
+
+#stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -10px;     /*座標調節（カーソル位置と円の中心を合わせる）*/
+  left: -10px;    /*座標調節（カーソル位置と円の中心を合わせる）*/
+  width: 20px;   /*マウスストーカーの直径*/
+  height: 20px;  /*マウスストーカーの直径*/
+  background: rgba(139, 139, 157, 0.5);
+  border-radius: 50%;
+  transform: translate(0,0);
+  transition: transform 0.2s;  /*ちょっと遅れてついてくるように*/
+  transition-timing-function: ease-out;
+  z-index: 999;
+}

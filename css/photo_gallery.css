@@ -1,0 +1,203 @@
+/*==================================================
+ギャラリーのためのcss
+===================================*/
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.menu li {
+    margin: 0 1%;
+}
+
+.gallery_2{
+	columns: 4;/*段組みの数*/
+	display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery {
+  /*columns: 4;/*段組みの数*/
+  display: flex;
+  flex-wrap: wrap;
+  /*padding:0 15px;*//*ギャラリー左右に余白をつける*/
+  /* margin:0; */
+}
+
+.gallery li {
+    list-style:none;
+    overflow: hidden;
+}
+
+img.script{
+	width: 100%;
+	height: 25vh;
+}
+
+img.works{
+	width: 100%;
+	height: 25vh;
+}
+
+/*ギャラリー内のイメージは横幅100%にする*/
+img.opa{
+	vertical-align: bottom;/*画像の下にできる余白を削除*/
+	opacity: 0.65;
+}
+
+
+img.opa:hover{
+    opacity: 1;
+}
+
+.z-idex_100{
+	z-index: 100;
+}
+
+/*　横幅900px以下の段組み設定　*/
+/*
+@media only screen and (max-width: 900px) {
+	.gallery{
+	columns:3;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.gallery{
+	columns: 2;
+	}
+}
+*/
+
+@media only screen and (max-width: 600px) {
+	.gallery{
+	columns: 2;
+	}
+}
+
+/**********************************************/
+
+/*==================================================
+印象編 4 最低限おぼえておきたい動き
+===================================*/
+
+/*========= レイアウトのためのCSS ===============*/
+
+.bgextend{
+	width:220px;
+	padding: 20px;
+	margin:0 20px 20px 0;/*上、右、下、左*/
+	box-sizing:border-box;
+}
+
+/*========= 背景色の動きのCSS ===============*/
+
+/*背景色が伸びて出現 共通*/
+.bgextend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;/*　はみ出た色要素を隠す　*/
+	opacity:0;
+}
+
+@keyframes bgextendAnimeBase{
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;
+}
+}
+
+/*中の要素*/
+.bgappear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration:1s;
+	animation-delay: 0.6s;
+	animation-fill-mode:forwards;/*完了時の状態でストップ*/
+	opacity: 0;
+}
+
+@keyframes bgextendAnimeSecond{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+/*--------- 左から --------*/
+.bgLRextend::before{
+	animation-name:bgLRextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #111;/*伸びる背景色の設定*/
+}
+@keyframes bgLRextendAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.bgappearTrigger,
+.bgUDextendTrigger,
+.bgDUextendTrigger,
+.bgRLextendTrigger,
+.bgLRextendTrigger{
+    opacity: 0;
+}
+
+
+/*==================================================
+ 7 画像リンクの動き
+===================================*/
+
+/*　印象編　7-3 画像が拡大＋回転　*/
+
+.zoomInRotate{
+/*opacityとtransformがかけあわさると生じる表示バグの回避*/
+    backface-visibility: hidden;
+}
+
+.zoomInRotate img{
+	transform: scale(1);
+	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoomInRotate a:hover img{/*hoverした時の変化*/
+	overflow: hidden;
+	transform:rotate(-5deg) scale(1.2);/*拡大、回転の値を変更したい場合はこの数値を変更*/
+}
+
+/*　画像のマスク　*/
+
+.mask{
+    /* display: block; */
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+}
+
