@@ -1,8 +1,3 @@
-//ハンガーメニュー用
-/*
-$(".openbtn").click(function () {
-    $(this).toggleClass('active');
-});*/
 
 //ナビゲーションメニュー用
 
@@ -49,11 +44,18 @@ $('#g-navi li a').click(function () {
 
 
 /* マウスストーカー */
+$(window).on('load',function(){
+	// ターゲット要素を取得する
+	const target = document.querySelector('#load_flug');
 
- //マウスストーカー用のdivを取得
- const stalker = document.getElementById('stalker'); 
+	// class属性を削除する
+	target.classList.remove('decay_load');
+});
 
- //上記のdivタグをマウスに追従させる処理
- document.addEventListener('mousemove', function (e) {
-	 stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
- });
+//マウスストーカー用のdivを取得
+const stalker = document.getElementById('stalker'); 
+
+//上記のdivタグをマウスに追従させる処理
+document.addEventListener('mousemove', function (e) {
+	stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+})
