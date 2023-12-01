@@ -2,7 +2,7 @@
 
 /*======== トップページの画像のためのCSS ===========*/
 #topimg{
-  background-image:url("../img/S__72409090.jpg");
+  background-image:url("../img/car_1024.png");
   height: 100vh;
   width: 100vw;
   background-size: cover;/*画面いっぱいにする*/
@@ -24,7 +24,6 @@ div.item{
   background-color: rgba(255,255,255,0.65); /* 背景色(白) */
   box-shadow: 0 0 5px 1px #ccc; /* 影 */
   /*border-radius:10px;*//*角を丸くする*/
-  z-index: 2;
   width: 100vw;
 }
 
@@ -756,14 +755,17 @@ nav ul li a:hover::before{
 #stalker {
   pointer-events: none;
   position: fixed;
-  top: -10px;     /*座標調節（カーソル位置と円の中心を合わせる）*/
-  left: -10px;    /*座標調節（カーソル位置と円の中心を合わせる）*/
-  width: 20px;   /*マウスストーカーの直径*/
-  height: 20px;  /*マウスストーカーの直径*/
-  background: rgba(139, 139, 157, 0.5);
-  border-radius: 50%;
+  top: -15px;     /*座標調節（カーソル位置と円の中心を合わせる）*/
+  left: -15px;    /*座標調節（カーソル位置と円の中心を合わせる）*/
+  width: 30px;   /*マウスストーカーの直径*/
+  height: 30px;  /*マウスストーカーの直径*/
   transform: translate(0,0);
   transition: transform 0.2s;  /*ちょっと遅れてついてくるように*/
   transition-timing-function: ease-out;
   z-index: 999;
+}
+
+/* ロードを送らせる */
+.decay_load{
+  display:none;
 }

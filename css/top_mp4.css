@@ -1,0 +1,37 @@
+/*========= 背景動画設定のCSS ===============*/
+
+#video-area{
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: auto;
+    height: auto;
+}
+
+/*画面サイズが変わっても常に動画の中央が表示されるようにする*/
+/*動画よりも画面が横に長くなるとき用*/
+@media (aspect-ratio: 16/9), (min-aspect-ratio: 16/9) {
+    #video {
+        min-width: 100vw;
+    }
+  }
+  
+  /*動画よりも画面が縦に長くなるとき用*/
+  @media (max-aspect-ratio: 16/9) {
+    #video {
+        min-height: 100vh;
+    }
+}
